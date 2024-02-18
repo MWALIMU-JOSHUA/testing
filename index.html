@@ -1,17 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clock</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
-</head>
-<body>
-    
-</body>
-</html>
-  
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>APPOINTMENT BOOKING</title>
+		<link
+			rel="stylesheet"
+			href="style.css" />
+		<script
+			defer
+			src="app.js"></script>
+	</head>
+	<body>
+		<div>
+			<nav>
+				<ul>
+					<li class="highlight"><a href="home.html">home</a></li>
+					<li><a href="home.html">about</a></li>
+					<li class="highlight"><a href="home.html">services</a></li>
+					<li><a href="home.html">contacts</a></li>
+					<li class="highlight"><a href="home.html">functions</a></li>
+					<li><a href="feedback.html">feedbacks</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container">
+			<h1>kenya <span class="highlight">motors</span> assembly</h1>
+			<p>Enter the following infomation to book appointment in our offices</p>
+			<h2>welcome all!</h2>
+			<form
+				action="process.js"
+				method="GET">
+				<lable
+					>your name: <br />
+					<input
+						type="text"
+						name="full-name"
+						placeholder="enter your name" /> </lable
+				><br />
+				<lable
+					>phone number: <br />
+					<input
+						type="number"
+						name="phone-number"
+						placeholder="enter your mombile number" /> </lable
+				><br />
+				<lable
+					>date to visit: <br />
+					<input
+						type="date"
+						name="visit-date" /> </lable
+				><br />
+				<div class="gender">
+					<p>Gender:</p>
 
-    
-    
+					<label
+						>Male
+						<input
+							type="radio"
+							name="geder-option"
+							value="" />
+					</label>
+					<label
+						>Female
+						<input
+							type="radio"
+							name="geder-option"
+							value="" />
+					</label>
+				</div>
+
+				<!-- <br /><br /> -->
+				<!-- <button onclick="window.location.href = 'page2.html';">Next</button> -->
+				<!-- <button  id="nextButton">Next</button> -->
+				<!-- <a href="page2.html" id="nextLink">
+					<button id="nextButton">Next</button>
+				</a> -->
+				<div class="submit">
+					<a href="submit.html"> <button>submit</button> </a>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
