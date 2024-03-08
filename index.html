@@ -8,26 +8,70 @@
 		<title>APPOINTMENT BOOKING</title>
 		<link
 			rel="stylesheet"
-			href="style.css" />
+			href="css/style.css" />
+		<link
+			rel="stylesheet"
+			href="css/menu.css" />
 		<script
 			defer
 			src="app.js"></script>
 	</head>
 	<body>
-		<div>
-			<nav>
-				<ul>
-					<li class="highlight"><a href="home.html">home</a></li>
-					<li><a href="home.html">about</a></li>
-					<li class="highlight"><a href="home.html">services</a></li>
-					<li><a href="home.html">contacts</a></li>
-					<li class="highlight"><a href="home.html">functions</a></li>
-					<li><a href="feedback.html">feedbacks</a></li>
-				</ul>
-			</nav>
+		<nav class="navbar">
+			<span class="open-slide">
+				<a
+					href="#"
+					onclick="openSlideMenu()">
+					<svg
+						width="30"
+						height="30">
+						<path
+							d="M0, 5 30,5"
+							stroke="#fff"
+							stroke-width="5" />
+						<path
+							d="M0, 14 30,14"
+							stroke="#fff"
+							stroke-width="5" />
+
+						<path
+							d="M0, 23 30,23"
+							stroke="#fff"
+							stroke-width="5" />
+					</svg>
+				</a>
+			</span>
+		</nav>
+		<div
+			id="side-menu"
+			class="side-nav">
+			<a
+				href="#"
+				class="btn-close"
+				onclick="closeSlideMenu()"
+				>&times;</a
+			>
+			<li class="highlight"><a href="home.html">home</a></li>
+			<li><a href="home.html">about</a></li>
+			<li class="#"><a href="about.html">services</a></li>
+			<li><a href="home.html">contacts</a></li>
+			<li class="highlight"><a href="home.html">functions</a></li>
+			<li><a href="feedback.html">feedbacks</a></li>
 		</div>
+
+		<script>
+			function openSlideMenu() {
+				document.getElementById("side-menu").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+			}
+			function closeSlideMenu() {
+				document.getElementById("side-menu").style.width = "0";
+				document.getElementById("main").style.marginLeft = "0";
+			}
+		</script>
+
 		<div class="container">
-			<h1>kenya <span class="highlight">motors</span> assembly</h1>
+			<h1>UEAB <span class="highlight"> APPOINTMENTS </span> BOOKING</h1>
 			<p>Enter the following infomation to book appointment in our offices</p>
 			<h2>welcome all!</h2>
 			<form
@@ -47,12 +91,31 @@
 						name="phone-number"
 						placeholder="enter your mombile number" /> </lable
 				><br />
-				<lable
-					>date to visit: <br />
+				<!-- <p id="form-login-username">
+					<label for="modlgn_username"> User ID</label>&nbsp;
 					<input
-						type="date"
-						name="visit-date" /> </lable
-				><br />
+						name="txtuser"
+						type="text"
+						id="txtuser"
+						required=""
+						style="width: 200px" /> -->
+
+					<!-- <center>
+					<input
+						type="submit"
+						name="btnAuth"
+						value="Authenticate"
+						id="btnAuth"
+						class="btn btn-primary" />
+				</center> -->
+					<lable
+						>date to visit: <br />
+						<input
+							type="date"
+							name="visit-date" /> </lable
+					><br />
+				</p>
+
 				<div class="gender">
 					<p>Gender:</p>
 
@@ -72,12 +135,6 @@
 					</label>
 				</div>
 
-				<!-- <br /><br /> -->
-				<!-- <button onclick="window.location.href = 'page2.html';">Next</button> -->
-				<!-- <button  id="nextButton">Next</button> -->
-				<!-- <a href="page2.html" id="nextLink">
-					<button id="nextButton">Next</button>
-				</a> -->
 				<div class="submit">
 					<a href="submit.html"> <button>submit</button> </a>
 				</div>
